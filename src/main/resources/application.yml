@@ -1,0 +1,18 @@
+---
+server:
+  port: 8880
+ 
+spring:
+  profiles: default
+
+
+eureka:
+  instance:
+    hostname: localhost 
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    region: default
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eurekaServer
+    
